@@ -1,8 +1,8 @@
-name: Output file
-on: workflow_dispatch
+name: CI
+on: push
 jobs:
-  info:
+  prod-check:
+    if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     steps:
-     - name: Output Github context
-       run: echo "${{ toJSON(github) }}"
+      - run: echo "Deploying to production server on branch $GITHUB_REF"
