@@ -23,4 +23,4 @@ jobs:
     if: github.event_name == 'push'
     runs-on: ubuntu-latest
     steps: 
-     - run: echo "Push Title is:${{github.event.push_request.title}}" // Full push event payload details.
+     - run: echo "Push Title is:${{github.event.head_commit.message}}" // Full push event payload details.
