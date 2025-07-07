@@ -49,10 +49,12 @@ jobs:
         echo "GraphQL URL: ${{github.graphql_url}}"
 
   
-  check-workspace:
+  check-workspace-shacode:
     runs-on: ubuntu-latest
     steps:
       - run: echo "GitHub workspace is:${{github.workspace}}"
+      - run: echo "GitHub workspace is:${{github.workflow_sha}}"
+      - run: echo "GitHub workspace is:${{github.workflow_ref}}"
 
      
 
