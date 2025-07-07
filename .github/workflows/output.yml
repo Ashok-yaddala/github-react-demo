@@ -11,5 +11,11 @@ jobs:
   show-actor:
     runs-on: ubuntu-latest
     steps: 
-      - run: echo "Triggered by:${{github.actor}}"
+      - run: echo "Triggered by:${{github.actor}}" //The username of the person or app that initiated the workflow.
 
+  log-pr-title:
+    if: github.event == 'pull_request'
+    runs-on: ubuntu-latest
+    steps: 
+     - run: echo "PR Title is:${{github.event.pull_request.title}}" // Full event payload details.
+    
