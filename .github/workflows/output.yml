@@ -17,5 +17,10 @@ jobs:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps: 
-     - run: echo "PR Title is:${{github.event.pull_request.title}}" // Full event payload details.
+     - run: echo "PR Title is:${{github.event.pull_request.title}}" // Full pull event payload details.
     
+  log-push-title:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps: 
+     - run: echo "Push Title is:${{github.event.push_request.title}}" // Full push event payload details.
