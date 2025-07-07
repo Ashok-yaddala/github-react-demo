@@ -28,3 +28,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: echo "Repository:${{github.repository}}" //Repo name with owner
+  
+  show-owner:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "Repositorty owner:${{github.repository_owner}}" //Repo owner details
+
+  show-ref:
+   runs-on: ubuntu-latest
+   steps:
+   - run: echo "Git Ref is:${{github.ref}}" //Branch name
+   - run: echo "Git Ref name is:${{github.ref_name}}" //Ref name
+   - run: echo "Git Ref name is:${{github.ref_type}}"  //Ref type
+
+
+
+
+
+
+
+
+    
