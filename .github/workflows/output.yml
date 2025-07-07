@@ -35,11 +35,12 @@ jobs:
     - run: echo "Repositorty owner:${{github.repository_owner}}" //Repo owner details
 
   show-ref:
-   runs-on: ubuntu-latest
-   steps:
-   - run: echo "Git Ref is:${{github.ref}}" //Branch name
-   - run: echo "Git Ref name is:${{github.ref_name}}" //Ref name
-   - run: echo "Git Ref name is:${{github.ref_type}}"  //Ref type
+    if: github.ref == 'refs/heads/feature'
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "Git Ref is:${{github.ref}}" //Branch name
+    - run: echo "Git Ref name is:${{github.ref_name}}" //Ref name
+    - run: echo "Git Ref name is:${{github.ref_type}}"  //Ref type
 
 
 
