@@ -50,11 +50,11 @@ jobs:
 
   
   check-workspace-shacode:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "GitHub workspace is:${{github.workspace}}"
-      - run: echo "GitHub workspace is:${{github.workflow_sha}}"
-      - run: echo "GitHub workspace is:${{github.workflow_ref}}"
+   if: github.workspace == github-react-demo
+   runs-on: ubuntu-latest
+   steps:
+      - run: echo "GitHub workflow sha code is:${{github.workflow_sha}}"
+      - run: echo "GitHub workflow ref id is:${{github.workflow_ref}}"
 
      
 
