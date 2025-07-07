@@ -27,4 +27,4 @@ jobs:
   show-repo:
     runs-on: ubuntu-latest
     steps:
-    - run: echo "Repository:${{github.repositorty}}" //Repo name with owner
+    - run: echo "Repository:${{github.repository}}" //Repo name with owner
