@@ -24,3 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
      - run: echo "Push Title is:${{github.event.head_commit.message}}" // Full push event payload details.
+  show-repo:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "Repository:${{github.repositorty}}" //Repo name with owner
