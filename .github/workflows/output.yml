@@ -52,7 +52,7 @@ jobs:
   check-workspace:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "GitHub workspace is:${{github.workspace}}
+      - run: echo "GitHub workspace is:${{github.workspace}}"
 
      
 
