@@ -54,11 +54,15 @@ jobs:
    steps:
       - run: echo "GitHub workflow sha code is:${{github.workflow_sha}}"
       - run: echo "GitHub workflow ref id is:${{github.workflow_ref}}"
-      - run: echo "GitHub workflow ref id is:${{github.workspace}}"
+      - run: echo "GitHub workflow workspace is:${{github.workspace}}"
 
     
-
-
+  use-token:
+   runs-on: ubuntu-latest
+   steps:
+   - name: call GIT HUB API
+     run: |
+       curl -H "Authorization: token ${{github.token}}" https://api.github.com/repos/${{github.repository}}
 
 
 
