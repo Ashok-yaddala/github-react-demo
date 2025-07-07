@@ -50,9 +50,10 @@ jobs:
 
   
   check-workspace:
-   runs-on: ubuntu-latest
-   steps:
-     - run: "Github workspace is: ${{github.workspace}}"
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "GitHub workspace is:${{github.workspace}}
+
      
 
 
