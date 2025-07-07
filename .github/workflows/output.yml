@@ -40,7 +40,14 @@ jobs:
     steps:
     - run: echo "Git Ref name is:${{github.ref_name}}" //Ref name
     - run: echo "Git Ref name is:${{github.ref_type}}"  //Ref type
-
+  show-urls:
+   runs-on: ubuntu-latest
+   steps:
+     - run: |
+        echo "Server URL: ${{github.server_url}}"
+        echo "API URL: ${{github.api_url}}"
+        echo "GraphQL URL: ${{github.graphql_url}}"
+     
 
 
 
